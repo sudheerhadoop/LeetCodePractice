@@ -1,0 +1,32 @@
+Reversing String in two ways:
+
+class Reverse
+{
+    // Complete the function
+    // str: input string
+    public static String reverseWord(String str)
+    {
+        
+        // Reverse the string str
+        int end = str.length()-1;
+        char[] ch = str.toCharArray();
+        
+        /*for(int i=ch.length-1;i>=0;i--)
+        {
+        s = s + ch[i];
+        
+        }
+        return s; */
+        
+        for(int i=0;i<str.length()/2;i++){
+            char tmp = ch[i];
+            ch[i] = ch[end];
+            ch[end] = tmp;
+            end--;
+        }
+        
+        return String.valueOf(ch);
+        
+        
+    }
+}
